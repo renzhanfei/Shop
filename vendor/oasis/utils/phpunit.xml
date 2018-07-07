@@ -1,0 +1,28 @@
+<!--suppress XmlUnboundNsPrefix -->
+<phpunit
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="http://schema.phpunit.de/5.7/phpunit.xsd"
+        bootstrap="ut/bootstrap.php"
+>
+    <testsuites>
+        <testsuite name="all">
+            <file>ut/Rc4Test.php</file>
+            <file>ut/StringUtilsTest.php</file>
+            <file>ut/MlibDataProviderTest.php</file>
+            <file>ut/DataPackerTest.php</file>
+            <file>ut/StringValidatorTest.php</file>
+            <file>ut/IntegerValidatorTest.php</file>
+            <file>ut/FloatValidatorTest.php</file>
+            <file>ut/ObjectValidatorTest.php</file>
+            <file>ut/BooleanValidatorTest.php</file>
+            <file>ut/ArrayValidatorTest.php</file>
+            <file>ut/StringLengthValidatorTest.php</file>
+            <file>ut/TrimmedStringValidatorTest.php</file>
+            <file>ut/EmailValidatorTest.php</file>
+            <file>ut/UrlValidatorTest.php</file>
+            <file>ut/RegexValidatorTest.php</file>
+            <file>ut/EnumerationValidatorTest.php</file>
+            <file>ut/ChainedValidatorTest.php</file>
+        </testsuite>
+    </testsuites>
+</phpunit>

@@ -1,0 +1,109 @@
+home:
+    path: /
+    defaults:
+        _controller: TestController::home
+
+sub:
+    prefix: sub/
+    resource: "subroutes.yml"
+    defaults:
+        name: papa
+
+secured:
+    prefix: secured/
+    resource: "Security/secured.routes.yml"
+
+twig:
+    prefix: twig/
+    resource: "Twig/twig.routes.yml"
+
+aws:
+    prefix: aws/
+    resource: "AwsTests/aws.routes.yml"
+
+httponly.test:
+    path: /httponly
+    schemes: http
+    defaults:
+        _controller: TestController::home
+
+domain.test.localhost:
+    path: /domain
+    host: localhost
+    defaults:
+        _controller: TestController::domainLocalhost
+
+domain.test.baidu:
+    path: /domain
+    host: baidu.com
+    defaults:
+        _controller: TestController::domainBaidu
+
+cors.home:
+    path: /cors/home
+    defaults:
+        _controller: TestController::corsHome
+
+cors.put:
+    path: /cors/put
+    methods: [PUT]
+    defaults:
+        _controller: TestController::corsHome
+
+param.config_value:
+    path: /param/config-value
+    host: "{game}.baidu.com"
+    defaults:
+        _controller: TestController::paramConfigValue
+        one: "%app.config1%"
+        two: "%app.config2%"
+        three: "%app.config1%%app.config2%"
+
+param.domain:
+    path: /param/domain
+    host: "{game}.baidu.com"
+    defaults:
+        _controller: TestController::paramDomain
+
+param.id:
+    path: "/param/id/{id}"
+    host: "{game}.baidu.com"
+    defaults:
+        _controller: TestController::paramId
+    requirements:
+        id: \d+
+
+param.slug:
+    path: "/param/id/{slug}"
+    host: "{game}.baidu.com"
+    defaults:
+        _controller: TestController::paramSlug
+    requirements:
+        slug: .*
+param.injected:
+    path: "/param/injected"
+    defaults:
+        _controller: TestController::paramInjected
+param.injected2:
+    path: "/param/injected2"
+    defaults:
+        _controller: TestController::paramInjectedWithInheritedClass
+
+param.chained:
+    path: "/param/chained/{id}"
+    defaults:
+        _controller: TestController::paramChained
+
+proxy.test:
+    path: "/proxy/test"
+    defaults:
+        _controller: TestController::proxyTest
+
+cookie.setter:
+    path: "cookie/set"
+    defaults:
+        _controller: TestController::cookieSetter
+cookie.checker:
+    path: "cookie/check"
+    defaults:
+        _controller: TestController::cookieChecker

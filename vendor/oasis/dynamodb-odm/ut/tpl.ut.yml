@@ -1,0 +1,4 @@
+prefix: odm-ut-
+dynamodb:
+    region: cn-north-1
+    profile: beijing-minhao

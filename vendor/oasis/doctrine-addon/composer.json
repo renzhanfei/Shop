@@ -1,0 +1,25 @@
+{
+    "name"       : "oasis/doctrine-addon",
+    "description": "Doctrine add-ons",
+    "type"       : "library",
+    "require"    : {
+        "oasis/logging": "^1.1",
+        "doctrine/orm" : "^2.5"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5.3"
+    },
+    "autoload"   : {
+        "psr-4": {
+            "Oasis\\Mlib\\Doctrine\\"    : "src/",
+            "Oasis\\Mlib\\Doctrine\\Ut\\": "ut/"
+        }
+    },
+    "license"    : "MIT",
+    "authors"    : [
+        {
+            "name" : "Minhao Zhang",
+            "email": "minhao.zhang@qq.com"
+        }
+    ]
+}

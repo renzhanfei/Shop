@@ -1,0 +1,34 @@
+{
+    "name"             : "oasis/logging",
+    "description"      : "Wrapper of monolog/monolog. Should be easier to use/configure than monolog",
+    "minimum-stability": "stable",
+    "license"          : "MIT",
+    "authors"          : [
+        {
+            "name" : "Minhao Zhang",
+            "email": "minhao.zhang@qq.com"
+        }
+    ],
+    "require"          : {
+        "monolog/monolog"                      : "^1.17",
+        "bramus/monolog-colored-line-formatter": "^2.0",
+        "oasis/utils"                          : "^1.6"
+    },
+    "require-dev"      : {
+        "phpunit/phpunit": "^5.1",
+        "symfony/console": "^3.0",
+        "symfony/finder" : "^3.0"
+    },
+    "suggest"          : {
+        "symfony/console"   : "^3.0",
+        "oasis/aws-wrappers": "^2.7"
+    },
+    "autoload"         : {
+        "psr-4": {
+            "Oasis\\Mlib\\Logging\\": "src/"
+        },
+        "files": [
+            "src/MLogging.inc.php"
+        ]
+    }
+}

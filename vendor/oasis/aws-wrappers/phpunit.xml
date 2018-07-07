@@ -1,0 +1,19 @@
+<!--suppress XmlUnboundNsPrefix -->
+<phpunit
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="http://schema.phpunit.de/5.7/phpunit.xsd"
+        bootstrap="ut/ut-bootstrap.php"
+        backupGlobals="false"
+        backupStaticAttributes="false"
+>
+    <testsuites>
+        <testsuite name="basic">
+            <file>ut/DynamoDbManagerTest.php</file>
+            <file>ut/DynamoDbTableTest.php</file>
+            <file>ut/DynamoDbItemTest.php</file>
+            <file>ut/S3ClientTest.php</file>
+            <file>ut/StsClientTest.php</file>
+            <file>ut/SqsQueueTest.php</file>
+        </testsuite>
+    </testsuites>
+</phpunit>

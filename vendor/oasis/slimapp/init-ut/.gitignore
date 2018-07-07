@@ -1,0 +1,11 @@
+/vendor/
+/.idea/
+/assets/
+/bin/
+/cache/
+/config/
+/src/
+/templates/
+/web/
+/bootstrap.php
+/phpunit.xml

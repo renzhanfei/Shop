@@ -1,0 +1,38 @@
+secured.admin:
+    path: /admin
+    defaults:
+        _controller: AuthController::admin
+secured.fadmin:
+    path: /fadmin
+    defaults:
+        _controller: AuthController::fadmin
+secured.fadmin.test:
+    path: /fadmin/test
+    defaults:
+        _controller: AuthController::fadmin
+secured.padmin:
+    path: /padmin
+    defaults:
+        _controller: AuthController::padmin
+secured.madmin:
+    path: /madmin
+    defaults:
+        _controller: AuthController::madmin
+
+secured.madmin.admin:
+    path: /madmin/admin
+    defaults:
+        _controller: AuthController::madmin
+
+secured.madmin.good:
+    path: /madmin/good
+    defaults:
+        _controller: AuthController::madminGood
+secured.madmin.parent:
+    path: /madmin/parent
+    defaults:
+        _controller: AuthController::madminParent
+secured.madmin.child:
+    path: /madmin/child
+    defaults:
+        _controller: AuthController::madminChild

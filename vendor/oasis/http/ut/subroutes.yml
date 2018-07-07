@@ -1,0 +1,5 @@
+sub.home:
+    path: /
+    defaults:
+        _controller: SubTestController::sub
+        name: mama

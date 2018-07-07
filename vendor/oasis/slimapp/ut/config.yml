@@ -1,0 +1,7 @@
+dir:
+    log:    /data/logs/slimapp
+    data:   /data/slimapp
+
+name: Jason
+count: 2
+once: false

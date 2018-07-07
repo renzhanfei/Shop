@@ -1,0 +1,45 @@
+imports: {  }
+parameters:
+    default.namespace:
+        - Oasis\Mlib\
+        - Xinhai\Shop\
+services:
+    app:
+        properties:
+            logging:
+                path: '%app.dir.log%'
+                level: debug
+            cli:
+                name: shop
+                version: '0.1'
+            http:
+                cache_dir: '%app.dir.cache%'
+                routing:
+                    path: '%app.dir.config%/routes.yml'
+                    namespaces:
+                        - Xinhai\Shop\
+                        - Xinhai\Shop\Controllers\
+                twig:
+                    template_dir: '%app.dir.template%'
+                    globals:
+                        app: '@app'
+                injected_args:
+                    - '@item_manager'
+    memcached:
+        class: Memcached
+        calls:
+            -
+                - addServer
+                -
+                    - '%app.memcached.host%'
+                    - '%app.memcached.port%'
+    entity_manager:
+        class: Doctrine\ORM\EntityManager
+        factory:
+            - Xinhai\Shop\Database\ShopDatabase
+            - getEntityManager
+    item_manager:
+        class: Oasis\Mlib\ODM\Dynamodb\ItemManager
+        factory:
+            - Xinhai\Shop\Database\ShopDatabase
+            - getItemManager

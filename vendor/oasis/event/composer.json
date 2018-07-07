@@ -1,0 +1,21 @@
+{
+    "name"       : "oasis/event",
+    "description": "Event dispatching helpers",
+    "type"       : "library",
+    "license"    : "MIT",
+    "authors"    : [
+        {
+            "name" : "Minhao Zhang",
+            "email": "minhao.zhang@qq.com"
+        }
+    ],
+    "require"    : {},
+    "require-dev": {
+        "phpunit/phpunit": "^5.1"
+    },
+    "autoload"   : {
+        "psr-4": {
+            "Oasis\\Mlib\\Event\\": "src/"
+        }
+    }
+}

@@ -1,0 +1,32 @@
+<!--suppress XmlUnboundNsPrefix -->
+<phpunit
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="http://schema.phpunit.de/5.7/phpunit.xsd"
+        bootstrap="ut/bootstrap.php"
+>
+    <testsuites>
+        <testsuite name="all">
+            <file>ut/SilexKernelTest.php</file>
+            <file>ut/SilexKernelWebTest.php</file>
+            <file>ut/FallbackViewHandlerTest.php</file>
+        </testsuite>
+        <testsuite name="exceptions">
+            <file>ut/HttpExceptionTest.php</file>
+        </testsuite>
+        <testsuite name="cors">
+            <file>ut/Cors/CrossOriginResourceSharingTest.php</file>
+            <file>ut/Cors/CrossOriginResourceSharingAdvancedTest.php</file>
+        </testsuite>
+        <testsuite name="security">
+            <file>ut/Security/SecurityServiceProviderTest.php</file>
+            <file>ut/Security/SecurityServiceProviderConfigurationTest.php</file>
+        </testsuite>
+        <testsuite name="twig">
+            <file>ut/Twig/TwigServiceProviderTest.php</file>
+            <file>ut/Twig/TwigServiceProviderConfigurationTest.php</file>
+        </testsuite>
+        <testsuite name="aws">
+            <file>ut/AwsTests/ElbTrustedProxyTest.php</file>
+        </testsuite>
+    </testsuites>
+</phpunit>
